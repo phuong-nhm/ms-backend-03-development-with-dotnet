@@ -23,6 +23,9 @@ namespace UserManagementAPI
 
             app.UseHttpsRedirection();
 
+            app.UseMiddleware<ErrorHandlingMiddleware>();
+            app.UseMiddleware<AuthenticationMiddleware>();
+            app.UseMiddleware<LoggingMiddleware>();
             app.UseAuthorization();
 
 
