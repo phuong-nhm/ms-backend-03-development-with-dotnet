@@ -3,19 +3,22 @@
 ### Get all users
 GET {{UserManagementAPI_HostAddress}}/api/users
 Accept: application/json
+Authorization: Bearer mysecrettoken
 
 ### Get user by ID
 GET {{UserManagementAPI_HostAddress}}/api/users/1
 Accept: application/json
+Authorization: Bearer mysecrettoken
 
 ### Create a new user
 POST {{UserManagementAPI_HostAddress}}/api/users
 Content-Type: application/json
+Authorization: Bearer mysecrettoken
 
 {
   "firstName": "Charlie",
   "lastName": "Pham",
-  "email": "charlie@company.com",
+  "email": "charlieww211@company.com",
   "phoneNumber": "555123456",
   "department": "IT",
   "role": "Support Engineer"
@@ -24,10 +27,11 @@ Content-Type: application/json
 ### Update an existing user
 PUT {{UserManagementAPI_HostAddress}}/api/users/1
 Content-Type: application/json
+Authorization: Bearer mysecrettoken
 
 {
   "firstName": "Alice",
-  "lastName": "Nguyen",
+  "lastName": "Ho",
   "email": "alice.updated@company.com",
   "phoneNumber": "111222333",
   "department": "HR",
@@ -36,3 +40,4 @@ Content-Type: application/json
 
 ### Delete a user
 DELETE {{UserManagementAPI_HostAddress}}/api/users/2
+Authorization: Bearer mysecrettoken
